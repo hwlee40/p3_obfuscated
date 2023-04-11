@@ -173,7 +173,11 @@ body{
     display: none;
 }
 
-
+@page {
+    size: auto;
+    margin: 250mm 250mm 250mm 250mm;
+    /* Doesnt seem to work hmm */
+}
 @media print {
     
     .noprint{
