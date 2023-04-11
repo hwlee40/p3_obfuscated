@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Walsheim";
+    src: url("fonts/GT-Walsheim-Pro-Regular.otf");
+}
+@font-face {
+    font-family: "Editorial";
+    src: url("fonts/PPEditorialNew-Regular.ttf");
+}
+@font-face {
+    font-family: "Maison";
+    src: url("fonts/Maison&Walsh-DemiBold.otf");
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    transition: .2s;
+    overflow: hidden;
+}
+.books-container{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    /* background: yellow; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.265);
+    align-items: flex-end;
+    margin-top: 6vh;
+    /* justify-content: center; */
+    transform: translate(100px, 0px);
+    opacity: 0;
+    transition: .5s;
+    margin-bottom: 100vh;
+}
+/* BOOK 1 */
+.book-1{
+    cursor: pointer;
+    background: white;
+    display: flex;
+    width: 85px;
+    height: 670px;
+    font-family: 'Walsheim';
+    font-size: 29px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    writing-mode: vertical-lr;
+    transform: rotate(6deg) translate(0px,-4px);
+    margin-right: 20px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-1:hover{
+    transform: rotate(6deg) translate(0px,-20px);
+    color: #1400FF;
+}
+/* BOOK 2 */
+.book-2{
+    cursor: pointer;
+    background: white;
+    display: flex;
+    width: 140px;
+    height: 500px;
+    font-family: 'Maison';
+    font-size: 37px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    writing-mode: vertical-lr;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-2:hover{
+    transform: translate(0px,-20px);
+    color: #FF9C06;
+}
+.book-2-ring{
+    width: 40px;
+    height: 40px;
+    border: 4.5px black solid;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book-2-text1{
+    writing-mode: horizontal-tb;
+}
+.book-2-text2{
+    font-size: 55px;
+}
+/* BOOK 3 */
+.book-3{
+    cursor: pointer;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 450px;
+    font-family: 'Walsheim';
+    font-size: 17px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-3:hover{
+    transform: translate(0px,-20px);
+    color: #FF06B9;
+}
+.book-3-text1{
+    text-align: center;
+    max-width: 160px;    
+}
+.book-3-text2{
+    font-size: 280px;
+    margin-bottom: -60px;
+}
+/* BOOK 4 */
+.book-4{
+    cursor: pointer;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 650px;
+    font-family: 'Editorial';
+    font-size: 17px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-4:hover{
+    transform: translate(0px,-20px);
+    color: #00A3FF;
+}
+.book-4-text1{
+    writing-mode: vertical-rl;
+    max-height: 180px;
+}
+.book-4-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: red; */
+
+}
+.book-4-text3{
+    font-size: 95px;
+    margin-bottom: -25px;
+}
+
+.book-5{
+    background: rgb(70, 70, 70);
+    width: 200px;
+    height: 450px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-6{
+    background:rgb(70, 70, 70);
+    width: 90px;
+    height: 600px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+.book-7{
+    background:rgb(70, 70, 70);
+    width: 120px;
+    height: 550px;
+    transition: transform 0.2s cubic-bezier(.47,-0.27,.32,1.47);
+}
+
+.articlecontainer{
+    display: none;
+}
+
+
+@media print {
+    
+    .noprint{
+      display:none;
+    }
+    .articlecontainer{
+        display: block;
+        font-family: "Editorial";
+        margin: 40px;
+
+    }
+    /* .article2{
+        display: none;
+    } */
+    .articleauthor{
+        position: absolute;
+        font-size: 30px;
+        color: rgb(190, 190, 190);
+        bottom: 40px;
+        
+    }
+    .articledate{
+        position: absolute;
+        font-size: 30px;
+        color: rgb(190, 190, 190);
+        bottom: 40px;
+        right: 40px;
+    }
+    .articletitle{
+        font-size: 60px;
+        page-break-after: always;
+    }
+    .articlebody{
+        font-family: "Maison";
+        font-size: 32px;
+        margin-top: 40px;
+    }
+    .bodyparagraph{
+        page-break-inside: avoid;
+    }
+  }
